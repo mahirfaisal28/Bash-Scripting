@@ -1,0 +1,43 @@
+#!/usr/bin/bash
+#This script is for simple calculater
+
+echo   ".....CALCULATER....."
+echo "Choose your operation: "
+select opt in Addition Subtraction Multiplication  Division Exit
+do
+case $opt in
+
+Addition)
+read -p "Enter Number-01: " num1
+read -p "Enter Number-02: " num2
+echo "The result of addition of $num1 & $num2 is: $((num1+num2))"
+;;
+
+Subtraction)
+read -p "Enter Number-01: " num1
+read -p "Enter Number-02: " num2
+echo "The result of subtraction of $num1 & $num2 is: $((num1-num2))"
+;;
+
+Multiplication)
+read -p "Enter Number-01: " num1
+read -p "Enter Number-02: " num2
+echo "The result of multiplication  of $num1 & $num2 is: $((num1*num2))"
+;;
+
+Division)
+read -p "Enter Number-01: " num1
+read -p "Enter Number-02: " num2
+echo "The result of division  of $num1 & $num2 is: $((num1/num2))"
+;;
+
+Exit)
+echo "Thank for using CALCULATER shell script. "
+exit 0
+;;
+
+*)
+echo "Invalid Option."
+;;
+esac
+done
